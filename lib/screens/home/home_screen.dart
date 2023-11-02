@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:halloween/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
+  static final screenName = '/home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -45,7 +47,9 @@ class _ListTileMenuItems extends StatelessWidget {
         title: Text(menuItem.title),
         subtitle: Text(menuItem.subTitle),
         trailing: const Icon(Icons.navigate_next),
-        onTap: () {},
+        onTap: () {
+          context.pushNamed(menuItem.screenName);
+        },
       ),
     );
   }

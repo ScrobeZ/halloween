@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:halloween/presentation/screen/home_screen.dart';
+import 'package:halloween/screens/home/home_screen.dart';
 
+import 'config/router/app_router.dart';
 import 'config/theme/app_theme.dart';
 
 void main() {
@@ -11,10 +12,10 @@ class MainApp extends StatelessWidget {
   const MainApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 4).getTheme(),
-      home: const HomeScreen(),
+      routerConfig: appRouter,
     );
   }
 }
