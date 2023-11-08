@@ -191,8 +191,10 @@ class _CardType4 extends StatelessWidget {
       elevation: elevation,
       child: Stack(
         children: [
-          Image.network('https://picsum.photos/id/${elevation.toInt()}/600/250',
-              height: 350, fit: BoxFit.cover),
+          Image.network(
+              'https://picsum.photos/id/${elevation.toInt() * 16}/600/250',
+              height: 350,
+              fit: BoxFit.cover),
           Align(
               alignment: Alignment.topRight,
               child: IconButton(
@@ -219,8 +221,10 @@ class _CardType5 extends StatelessWidget {
       elevation: elevation,
       child: Stack(
         children: [
-          Image.network('https://picsum.photos/id/${elevation.toInt()}/600/250',
-              height: 350, fit: BoxFit.cover),
+          Image.network(
+              'https://picsum.photos/id/${elevation.toInt() * 15}/600/250',
+              height: 350,
+              fit: BoxFit.cover),
           Align(
               alignment: Alignment.topRight,
               child: Container(
