@@ -196,12 +196,13 @@ class _CardType4 extends StatelessWidget {
               height: 350,
               fit: BoxFit.cover),
           Align(
-              alignment: Alignment.topRight,
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.more_vert_outlined),
-                color: Colors.white,
-              )),
+            alignment: Alignment.topRight,
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.more_vert_outlined),
+              color: Colors.white,
+            ),
+          ),
         ],
       ),
     );
