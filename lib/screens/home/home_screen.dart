@@ -48,7 +48,7 @@ class _ListTileMenuItems extends StatelessWidget {
         subtitle: Text(menuItem.subTitle),
         trailing: const Icon(Icons.navigate_next),
         onTap: () {
-          context.pushNamed(menuItem.screenName);
+          context.pushNamed(menuItem.title);
         },
       ),
     );
