@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:halloween/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
-  static final screenName = '/home_screen';
+  static const screenName = '/home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -48,7 +48,7 @@ class _ListTileMenuItems extends StatelessWidget {
         subtitle: Text(menuItem.subTitle),
         trailing: const Icon(Icons.navigate_next),
         onTap: () {
-          context.pushNamed(menuItem.title);
+          context.push(menuItem.link);
         },
       ),
     );

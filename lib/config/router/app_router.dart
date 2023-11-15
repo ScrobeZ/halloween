@@ -4,6 +4,7 @@ import 'package:halloween/screens/progress/progress_screen.dart';
 import 'package:halloween/screens/screens.dart';
 
 final GoRouter appRouter = GoRouter(
+  debugLogDiagnostics: true,
   routes: <RouteBase>[
     GoRoute(
       path: '/',

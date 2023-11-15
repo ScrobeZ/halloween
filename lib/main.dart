@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:halloween/screens/home/home_screen.dart';
 
 import 'config/router/app_router.dart';
 import 'config/theme/app_theme.dart';
