@@ -10,18 +10,27 @@ const colorList = <Color>[
   Colors.orange,
   Colors.deepOrange,
   Colors.pink,
-  Colors.pinkAccent,
+  Colors.pinkAccent
 ];
 
 class AppTheme {
   final int selectedColor;
-  AppTheme({this.selectedColor = 0})
-      : assert(
-          selectedColor >= 0 && selectedColor < colorList.length,
-          'La seleccion de color no cumple con el rango de 0 hasta${colorList.length - 1}',
-        );
+  final bool isDarkMode;
+
+  AppTheme({
+    this.selectedColor = 0,
+    this.isDarkMode = false,
+  }) : assert(selectedColor >= 0 && selectedColor < colorList.length,
+            'La selección de color no cumple con el rango de 0 asta ${colorList.length - 1}');
+
   ThemeData getTheme() => ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: colorList[selectedColor],
+      useMaterial3: true,
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
+      colorSchemeSeed: colorList[selectedColor],
+      appBarTheme: const AppBarTheme(centerTitle: false));
+
+  AppTheme copyWith({int? selectedColor, bool? isDarkMode}) => AppTheme(
+        selectedColor: selectedColor ?? this.selectedColor,
+        isDarkMode: isDarkMode ?? this.isDarkMode,
       );
 }
